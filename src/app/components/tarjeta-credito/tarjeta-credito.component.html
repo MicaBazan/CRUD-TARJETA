@@ -14,6 +14,14 @@
       <div class="card">
         <div class="card-body">
           <h5 class="titulo">AGREGAR TARJETA</h5>
+          <form>
+            <div class="input-group mb-3">
+              <span class="input-group-text">
+                <i class="fa-solid fa-user"></i>
+              </span>
+              <input type="text" class="form-control" placeholder="Username">
+            </div>
+          </form>
         </div>
       </div>
     </div>
@@ -23,34 +31,16 @@
           <h5 class="titulo">LISTADO DE TARJETAS</h5>
           <table class="table">
             <body>
-              <tr>
-                <td>Juan Perez</td>
-                <td>12321232134</td>
-                <td>11/23</td>
-                <td></td>
-                <td></td>
-              </tr>
-            </body>
-          </table>
-          <table class="table">
-            <body>
-              <tr>
-                <td>Juan Perez</td>
-                <td>12321232134</td>
-                <td>11/23</td>
-                <td></td>
-                <td></td>
-              </tr>
-            </body>
-          </table>
-          <table class="table">
-            <body>
-              <tr>
-                <td>Juan Perez</td>
-                <td>12321232134</td>
-                <td>11/23</td>
-                <td></td>
-                <td></td>
+              <tr *ngFor="let tarjeta of listTarjetas">
+                <td>{{ tarjeta.titular }}</td>
+                <td>{{ tarjeta.numeroTarjeta }}</td>
+                <td>{{ tarjeta.fechaExpiracion }}</td>
+                <td>
+                  <i class="far fa-regular fa-pen-to-square text-info"></i>
+                </td>
+                <td>
+                  <i class="far fa-regular fa-trash-can text-danger"></i>
+                </td>
               </tr>
             </body>
           </table>
