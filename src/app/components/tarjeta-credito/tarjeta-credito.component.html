@@ -14,18 +14,19 @@
       <div class="card">
         <div class="card-body">
           <h5 class="titulo">AGREGAR TARJETA</h5>
-          <form>
+
+          <form [formGroup]="form" (ngSubmit)="agregarTarjeta()">
             <div class="input-group input-group-lg mb-3">
               <span class="input-group-text">
                 <i class="fa-solid fa-user"></i>
               </span>
-              <input type="text" class="form-control" placeholder="Titular">
+              <input formControlName="titular" type="text" class="form-control" placeholder="Titular">
             </div>
             <div class="input-group input-group-lg mb-3">
               <span class="input-group-text">
                 <i class="fa-solid fa-credit-card"></i>
               </span>
-              <input type="text" class="form-control" placeholder="Número Tarjeta">
+              <input formControlName="numeroTarjeta" type="text" class="form-control" placeholder="Número Tarjeta">
             </div>
             <div class="row">
               <div class="col-lg-7">
@@ -33,7 +34,7 @@
                   <span class="input-group-text">
                     <i class="fa-solid fa-calendar-days"></i>
                   </span>
-                  <input type="text" class="form-control" placeholder="MM/YY">
+                  <input formControlName="fechaExpiracion" type="text" class="form-control" placeholder="MM/YY">
                 </div>
               </div>
               <div class="col-lg-5">
@@ -41,7 +42,7 @@
                   <span class="input-group-text">
                     <i class="fa-solid fa-key"></i>
                   </span>
-                  <input type="password" class="form-control" placeholder="CVV">
+                  <input formControlName="cvv" type="password" class="form-control" placeholder="CVV">
                 </div>
               </div>
             </div>
