@@ -18,7 +18,8 @@
           <form [formGroup]="form" (ngSubmit)="agregarTarjeta()">
             <div class="input-group input-group-lg mb-3">
               <span class="input-group-text">
-                <i class="fa-solid fa-user"></i>
+                <i class="fa-solid fa-user"
+                [class.green-icon]="this.form.get('titular')?.valid"></i>
               </span>
               <input formControlName="titular" type="text" class="form-control" placeholder="Titular">
             </div>
