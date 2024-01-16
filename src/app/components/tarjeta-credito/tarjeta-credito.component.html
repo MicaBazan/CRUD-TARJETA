@@ -59,7 +59,7 @@
         <div class="card-body">
           <h5 class="titulo">LISTADO DE TARJETAS</h5>
           <table class="table">
-            <body>
+            <tbody>
               <tr *ngFor="let tarjeta of listTarjetas">
                 <td>{{ tarjeta.titular }}</td>
                 <td>{{ tarjeta.numeroTarjeta }}</td>
@@ -71,7 +71,7 @@
                   <i class="far fa-regular fa-trash-can text-danger"></i>
                 </td>
               </tr>
-            </body>
+            </tbody>
           </table>
         </div>
       </div>
